@@ -54,80 +54,218 @@ body{
   background-color: rgb(25,25,25);  
 }
 
-.line-1 {
+@media only screen and (min-width: 1100px){
+  .line-1 {
+      position: relative;
+      z-index: 9500;
+      top: 50%;  
+      width: 12em;
+      margin: 0 auto;
+      border-right: 3px solid rgba(255,255,255,.75);
+      font-size: 500%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);    
+      pointer-events:none;        
+  }
+}
+@media only screen and (max-width: 1100px) and (min-width: 750px){
+  .line-1 {
     position: relative;
     z-index: 9500;
-    top: 50%;  
-    width: 12em;
+    top: 40%;  
+    width: 8em;
     margin: 0 auto;
     border-right: 3px solid rgba(255,255,255,.75);
-    font-size: 500%;
+    font-size: 300%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);    
     pointer-events:none;        
-
 }
+}
+
+@media only screen and (max-width: 750px){
+  .line-1 {
+    position: relative;
+    z-index: 9500;
+    top: 40%;  
+    width: 100%;
+    margin: 0 auto;
+    border-right: 3px solid rgba(255,255,255,.75);
+    font-size: 1.1em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+    pointer-events:none;        
+  
+  }
+}
+
 
 #name-anim{
   z-index: 9001;
 }
-.icons-header{
-  z-index: 9001;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%); 
-  position: relative;
-    z-index: 9500;
-    top: 50%;  
-    margin: 0 auto;  
-    pointer-events:none;        
+@media only screen and (min-width: 1100px){
+  .icons-header{
+    z-index: 9001;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%); 
+    position: relative;
+      z-index: 9500;
+      top: 50%;  
+      margin: 0 auto;  
+      pointer-events:none;        
 
+  }
+  .icons-header .icon {
+    text-align: center;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    font-size: 55px;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: all .7s;
+    pointer-events:auto;
+  }
+
+  .icons-header .icon:active,
+  .icons-header .icon:hover {
+    color: #1a222c;
+    background: #fff
+  }
+  .fa {
+    padding: 50px;
+    font-size: 1000px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+  } 
+}
+@media only screen and (max-width: 1100px) and (min-width: 750px){
+  .icons-header{
+    z-index: 9001;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%); 
+    position: relative;
+      z-index: 9500;
+      top: 50%;  
+      margin: 0 auto;  
+      pointer-events:none;        
+
+  }
+  .icons-header .icon {
+    text-align: center;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    font-size: 41.25px;
+    padding: 7.5px;
+    margin: 1.5px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    transition: all .7s;
+    pointer-events:auto;
+  }
+
+  .icons-header .icon:active,
+  .icons-header .icon:hover {
+    color: #1a222c;
+    background: #fff
+  }
+  .fa {
+    padding: 37.5px;
+    font-size: 750px;
+    width: 75px;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+@media only screen and (max-width: 750px){
+  .icons-header{
+    z-index: 9001;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%); 
+    position: relative;
+      z-index: 9500;
+      top: 60%;  
+      margin: 0 auto;  
+      pointer-events:none;        
+
+  }
+  .icons-header .icon {
+    text-align: center;
+    color: #fff;
+    width: 2em;
+    height: 2em;
+    font-size: 1em;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: all .7s;
+    pointer-events:auto;
+  }
+
+  .icons-header .icon:active,
+  .icons-header .icon:hover {
+    color: #1a222c;
+    background: #fff
+  }
+  .fa {
+    padding: 50px;
+    font-size: 1000px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+  }
 }
 
+@media only screen and (min-width: 1100px){
 
-.icons-header .icon {
-  text-align: center;
-  color: #fff;
-  width: 80px;
-  height: 80px;
-  font-size: 55px;
-  padding: 10px;
-  margin: 2px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  transition: all .7s;
-  pointer-events:auto;
-}
-
-.icons-header .icon:active,
-.icons-header .icon:hover {
-  color: #1a222c;
-  background: #fff
-}
-.fa {
-  padding: 50px;
-  font-size: 1000px;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-}
-/* Animation */
-.anim-typewriter{
-  animation: typewriter 2s steps(22) 1s 1 normal both,
-             blinkTextCursor 600ms steps(22) infinite normal;
-}
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 13em;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.9);}
-  to{border-right-color: transparent;}
+  /* Animation */
+  .anim-typewriter{
+    animation: typewriter 2s steps(22) 1s 1 normal both,
+              blinkTextCursor 600ms steps(22) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 13em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.9);}
+    to{border-right-color: transparent;}
+  }
 }
 
+@media only screen and (max-width: 1100px){
+
+  /* Animation */
+  .anim-typewriter{
+    animation: typewriter 2s steps(22) 1s 1 normal both,
+              blinkTextCursor 600ms steps(22) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 13em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.9);}
+    to{border-right-color: transparent;}
+  }
+}
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
