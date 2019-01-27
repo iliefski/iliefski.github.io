@@ -9,59 +9,123 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
    ========================================================================== */
 /* ---- base ---- */
 
-html,body{ 
-	width:100%;
-	height:100%;
-	background:#111;
-}
-
-html{
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  overflow: hidden;
-
-}
-
-canvas{
-  display:block;
-}
-
-#particles-js{
-  position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(10, 10, 10, 1);
-    z-index: 9000;
-}
-
-.intro{
-  height: calc(100vh - 20em);
-}
 
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono');
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: auto;
+  overflow-x: hidden;
 
+}
 body{
-  height: calc(100vh - 12em);
-  padding: 4em;
-  color: rgba(255,255,255,0.9);
+  padding: 0;
   -webkit-text-stroke: 1px rgba(100,100,100,0.2);
+  background-color: rgb(240,240,240);  
+}
+
+canvas{
+  display:flex;
+}
+
+#particles-js{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(2, 2, 2, 1);
+    z-index: 9000;
+}
+#particles-js2{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 9000;
+}
+
+.intro{
   font-family: 'Space Mono', monospace;
-  background-color: rgb(25,25,25);  
+  color: rgba(255,255,255,0.9);
+  padding-top: 30vh;
+  height: 20vh;
+  padding-bottom: 71vh;
+  background: rgba(2, 2, 2, 1);
+}
+.portfolio{
+  color: black;
+  width: 90vw;
+  margin: 3em;
+  
+}
+.footer{
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+
+}
+.footer-text{
+  width:100vw;
+  position: absolute;
+  z-index: 9500;
+  padding-top: 35vh;
+  height: 20vh;
+  padding-bottom: 66vh;
+  margin: auto;
+  color: black;
+
+}
+
+.pres-header{
+  font-family: 'Space Mono', monospace;
+  color: black;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+.proj-header{
+  font-family: 'Space Mono', monospace;
+  color: black;
+  margin-bottom: 0.25em;
+}
+.pres-text{
+  color: #151515;
+  font-size: 140%;
+
+}
+.proj-text{
+  color: #151515;
+  font-family: 'Space Mono', monospace;
+
+}
+.project-row{
+  margin-top: 2em;
+  margin-bottom: 1em;
+  background-color: #e5e5e5;
+  border: 1px solid #222222;
+  padding: 1em; 
+}
+
+.proj-pic{
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+
 }
 
 @media only screen and (min-width: 1100px){
   .line-1 {
       position: relative;
       z-index: 9500;
-      top: 50%;  
+      top: 40%;  
       width: 12em;
       margin: 0 auto;
-      border-right: 3px solid rgba(255,255,255,.75);
+      margin-bottom: 5vh;
+
+      border-right: 3px solid rgba(255,255,255,1);
       font-size: 500%;
       text-align: center;
       white-space: nowrap;
@@ -70,14 +134,15 @@ body{
       pointer-events:none;        
   }
 }
-@media only screen and (max-width: 1100px) and (min-width: 750px){
+@media only screen and (max-width: 1100px) and (min-width: 650px){
   .line-1 {
     position: relative;
     z-index: 9500;
     top: 40%;  
     width: 8em;
     margin: 0 auto;
-    border-right: 3px solid rgba(255,255,255,.75);
+    margin-bottom: 5vh;
+    border-right: 3px solid rgba(255,255,255,1);
     font-size: 300%;
     text-align: center;
     white-space: nowrap;
@@ -87,15 +152,16 @@ body{
 }
 }
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 650px){
   .line-1 {
     position: relative;
     z-index: 9500;
     top: 40%;  
     width: 100%;
     margin: 0 auto;
-    border-right: 3px solid rgba(255,255,255,.75);
-    font-size: 1.1em;
+    margin-bottom: 5vh;
+    border-right: 3px solid rgba(255,255,255,1);
+    font-size: 1.3em;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -104,7 +170,6 @@ body{
   
   }
 }
-
 
 #name-anim{
   z-index: 9001;
@@ -150,7 +215,7 @@ body{
     text-decoration: none;
   } 
 }
-@media only screen and (max-width: 1100px) and (min-width: 750px){
+@media only screen and (max-width: 1100px) and (min-width: 650px){
   .icons-header{
     z-index: 9001;
     text-align: center;
@@ -191,7 +256,7 @@ body{
     text-decoration: none;
   }
 }
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 650px){
   .icons-header{
     z-index: 9001;
     text-align: center;
@@ -200,7 +265,7 @@ body{
     transform: translateY(-50%); 
     position: relative;
       z-index: 9500;
-      top: 60%;  
+      top: 50%;  
       margin: 0 auto;  
       pointer-events:none;        
 
