@@ -126,40 +126,18 @@ canvas {
   z-index: 9000;
 }
 
-#particles-js2 {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 9000;
-}
 
 .intro {
   font-family: 'Space Mono', monospace;
   color: rgba(255, 255, 255, 0.9);
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #000000;
   position: relative;
-}
-
-.footer {
-  font-family: 'Space Mono', monospace;
-  text-align: center;
-  position: relative;
-  min-height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #000000;
+  overflow: hidden;
 }
 
 .footer-text {
@@ -168,6 +146,7 @@ canvas {
   text-align: center;
   color: #ffffff;
   position: relative;
+  margin-top: 5rem;
 }
 
 @media only screen and (min-width: 1100px) {
